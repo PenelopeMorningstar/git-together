@@ -18,6 +18,11 @@ void loop() {
 
 //Aisha
 void blink(){
+    //gssgdd
+    // git status -- for status 
+    // git add . -- to add all changes or files 
+    // git commit -m "name of changes" -- to commit changes and in "" use name to name it
+    // git push -u origin NAME_OF_BRANCH -- to push your commits
 
 }
 
