@@ -22,7 +22,16 @@ void blink(){
 }
 
 //Aleksandr
-void menu(){
+void menu()
+{
+
+
+void showMenu() {
+  Serial.println("\n=== MAIN MENU ===");
+  Serial.println("1. Calculate SUM of numbers");
+  Serial.println("2. Calculate MULTIPLICATION of numbers");
+  Serial.print("Choose an option: ");
+}
 
 }
 
