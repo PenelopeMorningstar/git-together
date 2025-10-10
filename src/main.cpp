@@ -22,7 +22,26 @@ void blink(){
 }
 
 //Aleksandr
-void menu(){
+void menu()
+{
+
+
+void loop() {
+  if (Serial.available()) {
+    char choice = Serial.read();
+
+    if (choice == '1') {
+      Serial.println("Enter numbers separated by space, end with '=':");
+      float sum = 0;
+      sum(sum, true);
+    } 
+    else if (choice == '2') {
+      Serial.println("Enter numbers separated by space, end with '=':");
+      float product = 1;
+      multiply(product, false);
+    }
+  }
+}
 
 }
 
