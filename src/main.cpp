@@ -26,11 +26,21 @@ void menu()
 {
 
 
-void showMenu() {
-  Serial.println("\n=== MAIN MENU ===");
-  Serial.println("1. Calculate SUM of numbers");
-  Serial.println("2. Calculate MULTIPLICATION of numbers");
-  Serial.print("Choose an option: ");
+void loop() {
+  if (Serial.available()) {
+    char choice = Serial.read();
+
+    if (choice == '1') {
+      Serial.println("Enter numbers separated by space, end with '=':");
+      float sum = 0;
+      sum(sum, true);
+    } 
+    else if (choice == '2') {
+      Serial.println("Enter numbers separated by space, end with '=':");
+      float product = 1;
+      multiply(product, false);
+    }
+  }
 }
 
 }
