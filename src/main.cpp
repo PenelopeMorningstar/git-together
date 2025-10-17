@@ -13,7 +13,8 @@ Serial.begin(9600);
 }
 
 void loop() {
-  
+  blink();
+  menu();
 }
 
 //Aisha
@@ -32,9 +33,9 @@ for (int i = 0; i < 5; i++) {
 
 //Aleksandr
 void menu() {
+  Serial.println("1) Add\t2) Multiply\t3) Modulo");
   if (Serial.available()) {
     char choice = Serial.read();
-
     if (choice == '1') {
       Serial.println("Enter numbers separated by space, end with '=':");
       add(); 
@@ -42,6 +43,9 @@ void menu() {
     else if (choice == '2') {
       Serial.println("Enter numbers separated by space, end with '=':");
       multiply();  
+    }
+    else if (choice == '3') {
+      modulo();  
     }
   }
 }
@@ -93,7 +97,7 @@ void modulo(){
     while(num2 == 0){
         num2 = Serial.parseInt();
     }
-    Serial.print("Module: ");
+    Serial.print("Modulo: ");
     Serial.print(num1%num2);
     Serial.println();
 }
