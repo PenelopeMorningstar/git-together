@@ -9,7 +9,7 @@ void modulo();
 
 //default
 void setup() {
-serial(9600);
+Serial.begin(9600);
 }
 
 void loop() {
@@ -40,6 +40,16 @@ void menu() {
 
 //Kylan
 void add(){
+  int N1;
+  int N2;
+
+  printf("First number: \n");
+  scanf("%d", &N1);
+  printf("Second number: \n");
+  scanf("%d", &N2);
+  int answer = N1 + N2;
+
+  printf("Answer: %i\n", answer);
 
 }
 
